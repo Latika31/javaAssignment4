@@ -1,15 +1,11 @@
 package Q1;
 
 interface Mammals{
-	 default void display1() {
-		System.out.println("I am a Mammal");
-	}
+	 void display1();
 }
 
 interface MarineAnimals{
-	 default void display2() {
-		System.out.println("I am a MarineAnimal");
-	}
+	void display2();
 }
 
 class BlueWhale implements Mammals, MarineAnimals{
@@ -31,4 +27,20 @@ class BlueWhale implements Mammals, MarineAnimals{
 		ma1.display2();
 	
 	}
+
+	@Override
+	public void display2() {
+		// TODO Auto-generated method stub
+		System.out.println("This is Mammals");
+		
+	}
+
+	@Override
+	public void display1() {
+		// TODO Auto-generated method stub
+		System.out.println("This is MarineAnimals");
+		
+	}
+
+
 }

@@ -1,7 +1,9 @@
 package Q4;
 
+import java.util.Scanner;
+
 public class Audi extends Car {
-	String model;
+	static String model;
 
 	public Audi() {
 		super();
@@ -20,9 +22,29 @@ public class Audi extends Car {
 	}
 
 
-	void display() {
+	void display() {	
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the type of model");
+		model = sc.next();
+		
+		super.display();
+		
 		System.out.println("This is Audi");
+		
+		//display of vehicle
+		System.out.println("Mileage: "+mileage);
+		System.out.println("Price: "+price);
+		
+		//display of car
+		System.out.println("Cost: "+cost);
+		System.out.println("Warranty: "+warranty);
+		System.out.println("Seat: "+seat);
+		System.out.println("Fuel: "+fuel);
+		
+		//display of audi
+		System.out.println("Model: "+model);
+		
 	}
-
 
 }
